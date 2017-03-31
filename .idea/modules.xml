@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asciidoc-awsome.iml" filepath="$PROJECT_DIR$/.idea/modules/asciidoc-awsome.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asciidoc-awsome_main.iml" filepath="$PROJECT_DIR$/.idea/modules/asciidoc-awsome_main.iml" group="asciidoc-awsome" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/asciidoc-awsome_test.iml" filepath="$PROJECT_DIR$/.idea/modules/asciidoc-awsome_test.iml" group="asciidoc-awsome" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/springfox.iml" filepath="$PROJECT_DIR$/.idea/modules/springfox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger2markup.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger2markup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger2markup_main.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger2markup_main.iml" group="swagger2markup" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/swagger2markup_test.iml" filepath="$PROJECT_DIR$/.idea/modules/swagger2markup_test.iml" group="swagger2markup" />
+    </modules>
+  </component>
+</project>
