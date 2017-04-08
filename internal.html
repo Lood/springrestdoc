@@ -582,7 +582,7 @@ use of HTTP status codes.</p>
 <h5 id="curl-example"><a class="anchor" href="#curl-example"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/speakers' -i -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers' -i -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json'</code></pre>
 </div>
 </div>
 </div>
@@ -590,7 +590,7 @@ use of HTTP status codes.</p>
 <h5 id="httpie-example"><a class="anchor" href="#httpie-example"></a>Httpie example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ http GET 'http://localhost:8080/speakers' 'Content-Type:application/hal+json;charset=UTF-8' 'Accept:application/hal+json'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://mydomain.com:8080/speakers' 'Content-Type:application/hal+json;charset=UTF-8' 'Accept:application/hal+json'</code></pre>
 </div>
 </div>
 </div>
@@ -601,7 +601,7 @@ use of HTTP status codes.</p>
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">GET /speakers HTTP/1.1
 Content-Type: application/hal+json;charset=UTF-8
 Accept: application/hal+json
-Host: localhost:8080</code></pre>
+Host: mydomain.com:8080</code></pre>
 </div>
 </div>
 </div>
@@ -613,7 +613,7 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 404
+Content-Length: 412
 
 {
   "_embedded" : {
@@ -622,7 +622,7 @@ Content-Length: 404
       "company" : "Pivotal",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/speakers/4"
+          "href" : "https://mydomain.com:8080/speakers/5"
         }
       }
     }, {
@@ -630,7 +630,7 @@ Content-Length: 404
       "company" : "Agile",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/speakers/5"
+          "href" : "https://mydomain.com:8080/speakers/6"
         }
       }
     } ]
@@ -691,7 +691,7 @@ Content-Length: 404
 <h5 id="curl-example-2"><a class="anchor" href="#curl-example-2"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/speakers/1' -i -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers/1' -i -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json'</code></pre>
 </div>
 </div>
 </div>
@@ -699,7 +699,7 @@ Content-Length: 404
 <h5 id="httpie-example-2"><a class="anchor" href="#httpie-example-2"></a>Httpie example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ http GET 'http://localhost:8080/speakers/1' 'Content-Type:application/hal+json;charset=UTF-8' 'Accept:application/hal+json'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ http GET 'https://mydomain.com:8080/speakers/1' 'Content-Type:application/hal+json;charset=UTF-8' 'Accept:application/hal+json'</code></pre>
 </div>
 </div>
 </div>
@@ -710,7 +710,7 @@ Content-Length: 404
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">GET /speakers/1 HTTP/1.1
 Content-Type: application/hal+json;charset=UTF-8
 Accept: application/hal+json
-Host: localhost:8080</code></pre>
+Host: mydomain.com:8080</code></pre>
 </div>
 </div>
 </div>
@@ -722,14 +722,14 @@ Host: localhost:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 142
+Content-Length: 146
 
 {
   "name" : "Josh Long",
   "company" : "Pivotal",
   "_links" : {
     "self" : {
-      "href" : "http://localhost:8080/speakers/1"
+      "href" : "https://mydomain.com:8080/speakers/1"
     }
   }
 }</code></pre>
@@ -804,7 +804,7 @@ Content-Length: 142
 <h5 id="curl-example-3"><a class="anchor" href="#curl-example-3"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'http://localhost:8080/speakers' -i -X POST -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json;charset=UTF-8' -d '{
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers' -i -X POST -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json;charset=UTF-8' -d '{
   "name" : "Josh Long",
   "company" : "Pivotal"
 }'</code></pre>
@@ -818,7 +818,7 @@ Content-Length: 142
 <pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ echo '{
   "name" : "Josh Long",
   "company" : "Pivotal"
-}' | http POST 'http://localhost:8080/speakers' 'Content-Type:application/hal+json;charset=UTF-8' 'Accept:application/hal+json;charset=UTF-8'</code></pre>
+}' | http POST 'https://mydomain.com:8080/speakers' 'Content-Type:application/hal+json;charset=UTF-8' 'Accept:application/hal+json;charset=UTF-8'</code></pre>
 </div>
 </div>
 </div>
@@ -829,7 +829,7 @@ Content-Length: 142
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">POST /speakers HTTP/1.1
 Content-Type: application/hal+json;charset=UTF-8
 Accept: application/hal+json;charset=UTF-8
-Host: localhost:8080
+Host: mydomain.com:8080
 Content-Length: 51
 
 {
@@ -846,7 +846,7 @@ Content-Length: 51
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 201 Created
-Location: http://localhost:8080/speakers/3</code></pre>
+Location: https://mydomain.com:8080/speakers/3</code></pre>
 </div>
 </div>
 </div>
