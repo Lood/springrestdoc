@@ -438,15 +438,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#endpoints">Endpoints</a>
 <ul class="sectlevel2">
-<li><a href="#speaker">Speaker</a>
-<ul class="sectlevel3">
-<li><a href="#get-all-speakers">Get all speakers</a></li>
-<li><a href="#get-speaker">Get speaker</a></li>
-<li><a href="#create-speaker">Create speaker</a></li>
+<li><a href="#speaker">Speaker</a></li>
 </ul>
 </li>
+<li><a href="#application-settings">Application settings</a>
+<ul class="sectlevel2">
+<li><a href="#profiles-setting">Profiles setting</a></li>
 </ul>
 </li>
+<li><a href="#code-conventions-and-best-practices">Code conventions and best practices</a>
+<ul class="sectlevel2">
+<li><a href="#packages">Packages</a></li>
+<li><a href="#constants">Constants</a></li>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#methods-in-tests">Methods in Tests</a></li>
+<li><a href="#special-notes">Special notes</a></li>
+<li><a href="#database">Database</a></li>
+</ul>
+</li>
+<li><a href="#links">Links</a></li>
 </ul>
 </div>
 </div>
@@ -902,6 +912,266 @@ Location: https://mydomain.com:8080/speakers/3</code></pre>
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="application-settings"><a class="anchor" href="#application-settings"></a>Application settings</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="profiles-setting"><a class="anchor" href="#profiles-setting"></a>Profiles setting</h3>
+<div class="paragraph">
+<p>Production profile:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-java" data-lang="java">spring.datasource.name=conference
+spring.jpa.show-sql=true
+spring.h2.console.enabled=true
+# logging.level.org.springframework.web=DEBUG
+#logging.level.org.hibernate=TRACE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="code-conventions-and-best-practices"><a class="anchor" href="#code-conventions-and-best-practices"></a>Code conventions and best practices</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>We are using google styleguide settings for IDE. <i class="conum" data-value="1"></i><b>(1)</b>
+This allows to share the same formatting code accross developers machines/IDEs.</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>For CodeBase we are using Oracle naming guidelines states. De-facto and De-ure industry standard. <i class="conum" data-value="2"></i><b>(2)</b>
+Mysql Error codes <i class="conum" data-value="3"></i><b>(3)</b></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="packages"><a class="anchor" href="#packages"></a>Packages</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Package names are written in all lower case to avoid conflict with the names of classes or interfaces.
+Companies use their reversed Internet domain name to begin their package names.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">    ua.org.smartjava.domain.speaker
+    ua.org.smartjava.domain.topic</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="constants"><a class="anchor" href="#constants"></a>Constants</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The names of variables declared class constants and of ANSI constants should be all uppercase with words separated by underscores ("_").
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">    public static final String HAL_JSON_CHARSET_UTF_8 = "application/hal+json;charset=UTF-8";
+
+    private static final String SPRING_HATEOAS_OBJECT_MAPPER = "_halObjectMapper";</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="methods"><a class="anchor" href="#methods"></a>Methods</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">public Speaker create(Speaker speaker) {
+        ...
+    }
+
+Optional&lt;Speaker&gt; findByName(String name);
+
+public Speaker createSpeaker() {
+        return Speaker.builder().name(name).build();
+    }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="methods-in-tests"><a class="anchor" href="#methods-in-tests"></a>Methods in Tests</h3>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Methods name should start with prefix <strong>test</strong> followed by testing method name in <strong>CamelCase</strong>.
+If there are more than one branch for testing, than use underscore _ and describe <strong>testCase</strong> with the <strong>first letter lowercase</strong>.
+Method name pattern is:     <strong>test&lt;MethodName&gt;_&lt;testCase&gt;</strong>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>method to test:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">    public Topic getTopic(long topicId) {
+        ...
+    }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>methods in tests for <strong>getTestCase(long testCaseId)</strong> explicitly by their name describe possible scenarios.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java" data-lang="java">    @Test
+    public void testGetTopic_success() {
+        ...
+    }
+
+    @Test
+    public void testGetTopic_notFound() {
+        ...
+    }</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="special-notes"><a class="anchor" href="#special-notes"></a>Special notes</h3>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+If you need to format string, do not use <code>java.text.MessageFormat</code> since its behavior depends on locale.
+  relies on the system Locale. Use <code>org.slf4j.helpers.MessageFormatter</code> instead.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="database"><a class="anchor" href="#database"></a>Database</h3>
+<div class="sect3">
+<h4 id="tables"><a class="anchor" href="#tables"></a>Tables</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Tables naming describes entities in plural form. The underscores are used
+between word, only lower case letters are used. For example:
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>topic
+speaker</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="constraints-keys-indexes"><a class="anchor" href="#constraints-keys-indexes"></a>Constraints, Keys, Indexes</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For indexes, foreign keys use uppercase latters to describe type of construction
+ and column name with underscores that construction is applied to:
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>CONSTRAINT `FK_table_name`
+
+KEY `FK_table_name`
+
+UNIQUE KEY `UK_table_name`</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="applying-a-patch"><a class="anchor" href="#applying-a-patch"></a>Applying a patch</h4>
+
+</div>
+<div class="sect3">
+<h4 id="jpa-mapping-entity"><a class="anchor" href="#jpa-mapping-entity"></a>JPA mapping entity</h4>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Do not edit/delete files in db.migration folder. In this case the checksum is changed.
+Updates to DB schema are applied only by adding new patch.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="links"><a class="anchor" href="#links"></a>Links</h2>
+<div class="sectionbody">
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Google StyleGuide for IDE. <a href="https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml" class="bare">https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Oracle naming guidelines. <a href="http://www.oracle.com/technetwork/java/codeconventions-150003.pdf" class="bare">http://www.oracle.com/technetwork/java/codeconventions-150003.pdf</a>
+<a href="http://www.oracle.com/technetwork/java/codeconvtoc-136057.html" class="bare">http://www.oracle.com/technetwork/java/codeconvtoc-136057.html</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Mysql error codes. <a href="https://dev.mysql.com/doc/refman/5.5/en/error-messages-server.html" class="bare">https://dev.mysql.com/doc/refman/5.5/en/error-messages-server.html</a></td>
+</tr>
+</table>
 </div>
 </div>
 </div>
