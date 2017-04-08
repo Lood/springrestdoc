@@ -5,7 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Test Driven Documentation with Spring Rest Docs</title>
+<meta name="author" content="Roman Tsypuk">
+<title>Speakers Service Guide</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -420,11 +421,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="book toc2 toc-left">
 <div id="header">
-<h1>Test Driven Documentation with Spring Rest Docs</h1>
+<h1>Speakers Service Guide</h1>
+<div class="details">
+<span id="author" class="author">Roman Tsypuk</span><br>
+<span id="email" class="email"><a href="mailto:tsypuk.rb@gmail.com">tsypuk.rb@gmail.com</a></span><br>
+<span id="revnumber">version 1.0,</span>
+<span id="revdate">March 31, 2017</span>
+</div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#terminology">Terminology</a></li>
+<li><a href="#test-driven-documentation-with-spring-rest-docs">Test Driven Documentation with Spring Rest Docs</a></li>
 <li><a href="#rest-conventions">Rest conventions</a>
 <ul class="sectlevel2">
 <li><a href="#http-verbs">HTTP verbs</a></li>
@@ -469,22 +477,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div id="content">
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Documenting RESTful services is important step in development, especially if you are working with microservices architecture or your RESTful APIs are shared and public available. The most widely used tool for this task is Swagger, but it has known limitations and tradeoffs.</p>
-</div>
-<div class="paragraph">
-<p>Pivotal’s Spring Rest Docs has provided robust, flexible approach that is called Test Driven Documentation. It extends well known Red-Green-Refactoring from TDD with additional phase of building documentation on the fly. This approach aligns 3 main components in your project – code base, integration tests and documentation and you are absolutely sure that your documentation is always up to date because it is generated from your tests. Furthermore it supports HATEOAS and provides lots of new features that are not available in Swagger.</p>
-</div>
-<div class="paragraph">
-<p>During this talk Roman will give a detailed overview of Spring Rest Docs as well as demonstrate practical usages of it within a Spring Boot app. Also, Roman will advise how to migrate your existing swagger’s project documentation into asciidoc format, extend it with tests and start using Spring Rest Docs.
-= Speakers Service Guide
-Roman Tsypuk &lt;<a href="mailto:tsypuk.rb@gmail.com">tsypuk.rb@gmail.com</a>&gt;
-v1.0, March 31, 2017</p>
-</div>
-</div>
-</div>
 <div class="sect1">
 <h2 id="terminology"><a class="anchor" href="#terminology"></a>Terminology</h2>
 <div class="sectionbody">
@@ -494,6 +486,20 @@ v1.0, March 31, 2017</p>
 <p>This is demo application of usage Spring RestDocs and asciidoctor.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="test-driven-documentation-with-spring-rest-docs"><a class="anchor" href="#test-driven-documentation-with-spring-rest-docs"></a>Test Driven Documentation with Spring Rest Docs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Documenting RESTful services is important step in development, especially if you are working with microservices architecture or your RESTful APIs are shared and public available. The most widely used tool for this task is Swagger, but it has known limitations and tradeoffs.</p>
+</div>
+<div class="paragraph">
+<p>Pivotal’s Spring Rest Docs has provided robust, flexible approach that is called Test Driven Documentation. It extends well known Red-Green-Refactoring from TDD with additional phase of building documentation on the fly. This approach aligns 3 main components in your project – code base, integration tests and documentation and you are absolutely sure that your documentation is always up to date because it is generated from your tests. Furthermore it supports HATEOAS and provides lots of new features that are not available in Swagger.</p>
+</div>
+<div class="paragraph">
+<p>During this talk Roman will give a detailed overview of Spring Rest Docs as well as demonstrate practical usages of it within a Spring Boot app. Also, Roman will advise how to migrate your existing swagger’s project documentation into asciidoc format, extend it with tests and start using Spring Rest Docs.</p>
 </div>
 </div>
 </div>
@@ -1195,7 +1201,8 @@ Updates to DB schema are applied only by adding new patch.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-04-08 20:04:10 +03:00
+Version 1.0<br>
+Last updated 2017-04-08 20:08:08 +03:00
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
