@@ -426,12 +426,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <span id="author" class="author">Roman Tsypuk</span><br>
 <span id="email" class="email"><a href="mailto:tsypuk.conf@gmail.com">tsypuk.conf@gmail.com</a></span><br>
 <span id="revnumber">version 1.0,</span>
-<span id="revdate">March 31, 2017</span>
+<span id="revdate">April 16, 2017</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#terminology">Terminology</a></li>
+<li><a href="#test-driven-documentation-with-spring-rest-docs">Test Driven Documentation with Spring Rest Docs</a></li>
 <li><a href="#rest-conventions">Rest conventions</a>
 <ul class="sectlevel2">
 <li><a href="#http-verbs">HTTP verbs</a></li>
@@ -485,6 +486,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>This is demo application of usage Spring RestDocs and asciidoctor.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="test-driven-documentation-with-spring-rest-docs"><a class="anchor" href="#test-driven-documentation-with-spring-rest-docs"></a>Test Driven Documentation with Spring Rest Docs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>JeeConf 2017.
+Love Java, love spring !!!</p>
+</div>
+<div class="paragraph">
+<p>Documenting RESTful services is important step in development, especially if you are working with microservices architecture or your RESTful APIs are shared and public available. The most widely used tool for this task is Swagger, but it has known limitations and tradeoffs.
+Pivotal’s Spring Rest Docs has provided robust, flexible approach that is called Test Driven Documentation. It extends well known Red-Green-Refactoring from TDD with additional phase of building documentation on the fly. This approach aligns 3 main components in your project – code base, integration tests and documentation and you are absolutely sure that your documentation is always up to date because it is generated from your tests. Furthermore it supports HATEOAS and provides lots of new features that are not available in Swagger.
+During this talk Roman will give a detailed overview of Spring Rest Docs as well as demonstrate practical usages of it within a Spring Boot app. Also, Roman will advise how to migrate your existing swagger’s project documentation into asciidoc format, extend it with tests and start using Spring Rest Docs.</p>
 </div>
 </div>
 </div>
@@ -925,11 +940,6 @@ Location: https://mydomain.com:8080/speakers/3</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="imageblock">
-<div class="content">
-<img src="http://asciidoctor.org/images/octocat.jpg" alt="GitHub mascot">
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -948,7 +958,10 @@ Location: https://mydomain.com:8080/speakers/3</code></pre>
 <p><i class="fa fa-check-square-o"></i> Implement swagger migration.</p>
 </li>
 <li>
-<p><i class="fa fa-square-o"></i> Some item
+<p><i class="fa fa-square-o"></i> Add tests for all items.</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Finish slides.
 == Application settings</p>
 </li>
 </ul>
