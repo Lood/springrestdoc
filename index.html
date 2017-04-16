@@ -449,7 +449,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#application-settings">Application settings</a>
+<li><a href="#todo-items">TODO items</a>
 <ul class="sectlevel2">
 <li><a href="#profiles-setting">Profiles setting</a></li>
 </ul>
@@ -626,7 +626,7 @@ Host: mydomain.com:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 412
+Content-Length: 606
 
 {
   "_embedded" : {
@@ -635,7 +635,10 @@ Content-Length: 412
       "company" : "Pivotal",
       "_links" : {
         "self" : {
-          "href" : "https://mydomain.com:8080/speakers/6"
+          "href" : "https://mydomain.com:8080/speakers/5"
+        },
+        "topics" : {
+          "href" : "https://mydomain.com:8080/speakers/5/topics"
         }
       }
     }, {
@@ -643,7 +646,10 @@ Content-Length: 412
       "company" : "Agile",
       "_links" : {
         "self" : {
-          "href" : "https://mydomain.com:8080/speakers/7"
+          "href" : "https://mydomain.com:8080/speakers/6"
+        },
+        "topics" : {
+          "href" : "https://mydomain.com:8080/speakers/6/topics"
         }
       }
     } ]
@@ -735,7 +741,7 @@ Host: mydomain.com:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 146
+Content-Length: 231
 
 {
   "name" : "Josh Long",
@@ -743,6 +749,9 @@ Content-Length: 146
   "_links" : {
     "self" : {
       "href" : "https://mydomain.com:8080/speakers/1"
+    },
+    "topics" : {
+      "href" : "https://mydomain.com:8080/speakers/1/topics"
     }
   }
 }</code></pre>
@@ -780,11 +789,6 @@ Content-Length: 146
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Link section.</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_links.self.href</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Link to self section.</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -805,6 +809,10 @@ Content-Length: 146
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>self</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Link to self section.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>topics</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link to speaker&#8217;s topics</p></td>
 </tr>
 </tbody>
 </table>
@@ -907,18 +915,21 @@ Location: https://mydomain.com:8080/speakers/3</code></pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The speaker&#8217;s name.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be blank.
-Must not be null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be blank</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">company</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The company speaker is working on.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be empty.
-Must not be null</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be empty</p></td>
 </tr>
 </tbody>
 </table>
+<div class="imageblock">
+<div class="content">
+<img src="http://asciidoctor.org/images/octocat.jpg" alt="GitHub mascot">
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -926,8 +937,22 @@ Must not be null</p></td>
 </div>
 </div>
 <div class="sect1">
-<h2 id="application-settings"><a class="anchor" href="#application-settings"></a>Application settings</h2>
+<h2 id="todo-items"><a class="anchor" href="#todo-items"></a>TODO items</h2>
 <div class="sectionbody">
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Create controller tests.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Implement swagger migration.</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> Some item
+== Application settings</p>
+</li>
+</ul>
+</div>
 <div class="sect2">
 <h3 id="profiles-setting"><a class="anchor" href="#profiles-setting"></a>Profiles setting</h3>
 <div class="paragraph">
