@@ -424,7 +424,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h1>Speakers Service Guide</h1>
 <div class="details">
 <span id="author" class="author">Roman Tsypuk</span><br>
-<span id="email" class="email"><a href="mailto:tsypuk.rb@gmail.com">tsypuk.rb@gmail.com</a></span><br>
+<span id="email" class="email"><a href="mailto:tsypuk.conf@gmail.com">tsypuk.conf@gmail.com</a></span><br>
 <span id="revnumber">version 1.0,</span>
 <span id="revdate">March 31, 2017</span>
 </div>
@@ -635,7 +635,7 @@ Content-Length: 412
       "company" : "Pivotal",
       "_links" : {
         "self" : {
-          "href" : "https://mydomain.com:8080/speakers/5"
+          "href" : "https://mydomain.com:8080/speakers/6"
         }
       }
     }, {
@@ -643,7 +643,7 @@ Content-Length: 412
       "company" : "Agile",
       "_links" : {
         "self" : {
-          "href" : "https://mydomain.com:8080/speakers/6"
+          "href" : "https://mydomain.com:8080/speakers/7"
         }
       }
     } ]
@@ -887,7 +887,7 @@ Location: https://mydomain.com:8080/speakers/3</code></pre>
 <div class="sect5">
 <h6 id="constrains"><a class="anchor" href="#constrains"></a>Constrains</h6>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. SpeakerDTO</caption>
+<caption class="title">Table 1. SpeakerDTO Constrains</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -907,13 +907,15 @@ Location: https://mydomain.com:8080/speakers/3</code></pre>
 <td class="tableblock halign-left valign-top"><p class="tableblock">name</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The speaker&#8217;s name.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be blank</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be blank.
+Must not be null</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">company</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The company speaker is working on.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be empty</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Must not be empty.
+Must not be null</p></td>
 </tr>
 </tbody>
 </table>
