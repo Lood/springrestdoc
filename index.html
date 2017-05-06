@@ -529,11 +529,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="morning-lohika-2017"><a class="anchor" href="#morning-lohika-2017"></a>2.1. Morning@Lohika 2017</h3>
 <div class="paragraph">
-<p>Morning@Lohika
-May 20, 2017
-Today is Moring@Lohika&#8217;s birthday !!!
-3 active years with lots of
-interesting speakers and events !!!</p>
+<p>morning@lohika
+May 20, 2017</p>
+</div>
+<div class="paragraph">
+<p><a href="http://morning.lohika.com/news/3rd-birthday-morninglohika" class="bare">http://morning.lohika.com/news/3rd-birthday-morninglohika</a></p>
 </div>
 </div>
 </div>
@@ -645,7 +645,9 @@ use of HTTP status codes.</p>
 <h5 id="curl-example"><a class="anchor" href="#curl-example"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers' -i -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers' -i \
+    -H 'Content-Type: application/hal+json;charset=UTF-8' \
+    -H 'Accept: application/hal+json'</code></pre>
 </div>
 </div>
 </div>
@@ -668,14 +670,14 @@ Host: mydomain.com:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 694
+Content-Length: 702
 
 {
   "_embedded" : {
     "speakers" : [ {
       "name" : "Josh Long",
       "company" : "Pivotal",
-      "status" : "I like Spring Rest Docs",
+      "status" : "I like morning@lohika \\0//",
       "_links" : {
         "self" : {
           "href" : "https://mydomain.com:8080/speakers/6"
@@ -687,7 +689,7 @@ Content-Length: 694
     }, {
       "name" : "Venkat Subramaniam",
       "company" : "Agile",
-      "status" : "I like Spring Rest Docs",
+      "status" : "I like morning@lohika \\0//",
       "_links" : {
         "self" : {
           "href" : "https://mydomain.com:8080/speakers/7"
@@ -734,9 +736,24 @@ Content-Length: 694
 <td class="tableblock halign-left valign-top"><p class="tableblock">Speaker&#8217;s name.</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.speakers[].company</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speaker&#8217;s company.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.speakers[].status</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speaker&#8217;s status name.</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.speakers[]._links</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Link section.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.speakers[]._links</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#resources-tags-links">HATEOAS Links</a> to Speaker actions</p></td>
 </tr>
 </tbody>
 </table>
@@ -749,7 +766,9 @@ Content-Length: 694
 <h5 id="curl-example-2"><a class="anchor" href="#curl-example-2"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers/1' -i -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json;charset=UTF-8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers/1' -i \
+    -H 'Content-Type: application/hal+json;charset=UTF-8' \
+    -H 'Accept: application/hal+json;charset=UTF-8'</code></pre>
 </div>
 </div>
 </div>
@@ -765,6 +784,28 @@ Host: mydomain.com:8080</code></pre>
 </div>
 </div>
 <div class="sect4">
+<h5 id="path-variables"><a class="anchor" href="#path-variables"></a>Path variables</h5>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. /speakers/{id}</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>id</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Required identifier of Speaker</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
 <h5 id="http-response-2"><a class="anchor" href="#http-response-2"></a>HTTP Response</h5>
 <div class="sect5">
 <h6 id="success-http-responses-2"><a class="anchor" href="#success-http-responses-2"></a>Success HTTP responses</h6>
@@ -772,12 +813,12 @@ Host: mydomain.com:8080</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/hal+json;charset=UTF-8
-Content-Length: 271
+Content-Length: 275
 
 {
   "name" : "Josh Long",
   "company" : "Pivotal",
-  "status" : "I like Spring Rest Docs",
+  "status" : "I like morning@lohika \\0//",
   "_links" : {
     "self" : {
       "href" : "https://mydomain.com:8080/speakers/1"
@@ -809,29 +850,29 @@ Content-Length: 271
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>name</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The speaker&#8217;s name</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>company</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The speaker&#8217;s company</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_links</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Link section</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speaker&#8217;s name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>status</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The speaker&#8217;s status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speaker&#8217;s name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>company</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Speaker&#8217;s name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_links</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#resources-tags-links">Links</a> to Speakers HATEOAS</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="sect5">
 <h6 id="hateoas-links"><a class="anchor" href="#hateoas-links"></a>HATEOAS links</h6>
-<table class="tableblock frame-all grid-all spread">
+<table id="resources-tags-links" class="tableblock frame-all grid-all spread">
 <colgroup>
 <col style="width: 50%;">
 <col style="width: 50%;">
@@ -862,7 +903,10 @@ Content-Length: 271
 <h5 id="curl-example-3"><a class="anchor" href="#curl-example-3"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers' -i -X POST -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json;charset=UTF-8' -d '{
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers' -i -X POST \
+    -H 'Content-Type: application/hal+json;charset=UTF-8' \
+    -H 'Accept: application/hal+json;charset=UTF-8' \
+    -d '{
   "name" : "Josh Long",
   "company" : "Pivotal"
 }'</code></pre>
@@ -880,6 +924,17 @@ Host: mydomain.com:8080
 Content-Length: 51
 
 {
+  "name" : "Josh Long",
+  "company" : "Pivotal"
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="request-body"><a class="anchor" href="#request-body"></a>Request Body</h5>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code>{
   "name" : "Josh Long",
   "company" : "Pivotal"
 }</code></pre>
@@ -921,7 +976,7 @@ Location: https://mydomain.com:8080/speakers/3</code></pre>
 <div class="sect5">
 <h6 id="constrains"><a class="anchor" href="#constrains"></a>Constrains</h6>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. SpeakerDTO Constrains</caption>
+<caption class="title">Table 2. SpeakerDTO Constrains</caption>
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 25%;">
@@ -1061,7 +1116,9 @@ Content-Length: 160
 <h5 id="curl-example-4"><a class="anchor" href="#curl-example-4"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers/5' -i -X DELETE -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json;charset=UTF-8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers/5' -i -X DELETE \
+    -H 'Content-Type: application/hal+json;charset=UTF-8' \
+    -H 'Accept: application/hal+json;charset=UTF-8'</code></pre>
 </div>
 </div>
 </div>
@@ -1094,7 +1151,9 @@ Host: mydomain.com:8080</code></pre>
 <h5 id="curl-example-5"><a class="anchor" href="#curl-example-5"></a>Curl example</h5>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers/9/topics' -i -H 'Content-Type: application/hal+json;charset=UTF-8' -H 'Accept: application/hal+json;charset=UTF-8'</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash" data-lang="bash">$ curl 'https://mydomain.com:8080/speakers/9/topics' -i \
+    -H 'Content-Type: application/hal+json;charset=UTF-8' \
+    -H 'Accept: application/hal+json;charset=UTF-8'</code></pre>
 </div>
 </div>
 </div>
@@ -1162,27 +1221,57 @@ Content-Length: 406
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">'topics' array with Topic resources.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">'topics' array with Topic resources</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.topics</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Array</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Array of topics that are associated with speaker.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Array of topics that are associated with speaker</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.topics[].name</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Topic name.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Topic name</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.topics[].description</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>String</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Topic description.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Topic description</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.topics[]._links</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Link section.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link section</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_embedded.topics[]._links</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Object</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HATEOAS links</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="hateoas-links-2"><a class="anchor" href="#hateoas-links-2"></a>HATEOAS links</h6>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Relation</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>self</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link to self</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>topics</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Link to speaker&#8217;s topics.</p></td>
 </tr>
 </tbody>
 </table>
@@ -1878,7 +1967,7 @@ Updates to DB schema are applied only by adding new patch.
 <div id="footer">
 <div id="footer-text">
 Version 1.0<br>
-Last updated 2017-04-30 22:43:27 +03:00
+Last updated 2017-05-05 09:35:41 +03:00
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css">
