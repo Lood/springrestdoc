@@ -425,86 +425,171 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">Roman Tsypuk</span><br>
 <span id="email" class="email"><a href="mailto:tsypuk.conf@gmail.com">tsypuk.conf@gmail.com</a></span><br>
-<span id="revnumber">version 1.1,</span>
-<span id="revdate">May 13, 2017</span>
+<span id="revnumber">version 1.2,</span>
+<span id="revdate">May 20, 2017</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
-<li><a href="#terminology">1. Terminology</a></li>
-<li><a href="#rest-conventions">2. Rest conventions</a>
+<li><a href="#my-presentation-for-java-communities-about-spring-rest-docs">1. My presentation for Java communities about Spring Rest Docs</a>
 <ul class="sectlevel2">
-<li><a href="#http-verbs">2.1. HTTP verbs</a></li>
-<li><a href="#http-status-codes">2.2. HTTP status codes</a></li>
+<li><a href="#morning-lohika-2017">1.1. Morning@Lohika 2017</a></li>
 </ul>
 </li>
-<li><a href="#endpoints">3. Endpoints</a>
+<li><a href="#terminology">2. Terminology</a></li>
+<li><a href="#rest-conventions">3. Rest conventions</a>
 <ul class="sectlevel2">
-<li><a href="#speaker">3.1. Speaker</a>
+<li><a href="#http-verbs">3.1. HTTP verbs</a></li>
+<li><a href="#http-status-codes">3.2. HTTP status codes</a></li>
+</ul>
+</li>
+<li><a href="#endpoints">4. Endpoints</a>
+<ul class="sectlevel2">
+<li><a href="#speaker">4.1. Speaker</a>
 <ul class="sectlevel3">
-<li><a href="#get-all-speakers">3.1.1. Get all speakers</a></li>
-<li><a href="#get-speaker">3.1.2. Get speaker</a></li>
-<li><a href="#create-speaker">3.1.3. Create speaker</a></li>
-<li><a href="#delete-speaker">3.1.4. Delete speaker</a></li>
-<li><a href="#get-speaker-s-topics">3.1.5. Get speaker&#8217;s topics</a></li>
+<li><a href="#get-all-speakers">4.1.1. Get all speakers</a></li>
+<li><a href="#get-speaker">4.1.2. Get speaker</a></li>
+<li><a href="#create-speaker">4.1.3. Create speaker</a></li>
+<li><a href="#delete-speaker">4.1.4. Delete speaker</a></li>
+<li><a href="#get-speaker-s-topics">4.1.5. Get speaker&#8217;s topics</a></li>
 </ul>
 </li>
-<li><a href="#topic">3.2. Topic</a></li>
+<li><a href="#topic">4.2. Topic</a></li>
 </ul>
 </li>
-<li><a href="#asciidoc-is-awesome">4. AsciiDoc is awesome</a>
+<li><a href="#asciidoc-is-awesome">5. AsciiDoc is awesome</a>
 <ul class="sectlevel2">
-<li><a href="#admonitions">4.1. Admonitions</a></li>
-<li><a href="#text-formatting">4.2. Text formatting</a></li>
-<li><a href="#marks">4.3. Marks</a></li>
-<li><a href="#superscript-subscript">4.4. Superscript Subscript</a></li>
-<li><a href="#horizontal-line">4.5. Horizontal line</a></li>
-<li><a href="#lists">4.6. Lists</a>
+<li><a href="#admonitions">5.1. Admonitions</a></li>
+<li><a href="#text-formatting">5.2. Text formatting</a></li>
+<li><a href="#marks">5.3. Marks</a></li>
+<li><a href="#superscript-subscript">5.4. Superscript Subscript</a></li>
+<li><a href="#horizontal-line">5.5. Horizontal line</a></li>
+<li><a href="#lists">5.6. Lists</a>
 <ul class="sectlevel3">
-<li><a href="#ordered">4.6.1. Ordered</a></li>
+<li><a href="#ordered">5.6.1. Ordered</a></li>
 </ul>
 </li>
-<li><a href="#checklists">4.7. Checklists</a></li>
-<li><a href="#q-a">4.8. Q&amp;A</a></li>
-<li><a href="#links">4.9. Links</a></li>
-<li><a href="#images">4.10. Images</a></li>
-<li><a href="#code-blocks">4.11. Code blocks</a></li>
-<li><a href="#code-included-from-source-file-speaker-java">4.12. Code included from source file Speaker.java</a></li>
-<li><a href="#code-from-source-only-lines-26-49-included">4.13. Code from source only lines 26-49 included</a></li>
-<li><a href="#block-quote">4.14. Block quote</a></li>
-<li><a href="#admonition-block">4.15. Admonition block</a></li>
+<li><a href="#checklists">5.7. Checklists</a></li>
+<li><a href="#q-a">5.8. Q&amp;A</a></li>
+<li><a href="#links">5.9. Links</a></li>
+<li><a href="#images">5.10. Images</a></li>
+<li><a href="#code-blocks">5.11. Code blocks</a></li>
+<li><a href="#code-included-from-source-file-speaker-java">5.12. Code included from source file Speaker.java</a></li>
+<li><a href="#code-from-source-only-lines-26-49-included">5.13. Code from source only lines 26-49 included</a></li>
+<li><a href="#block-quote">5.14. Block quote</a></li>
+<li><a href="#admonition-block">5.15. Admonition block</a></li>
 </ul>
 </li>
-<li><a href="#application-settings">5. Application settings</a>
+<li><a href="#application-settings">6. Application settings</a>
 <ul class="sectlevel2">
-<li><a href="#profiles-setting">5.1. Profiles setting</a></li>
+<li><a href="#profiles-setting">6.1. Profiles setting</a></li>
 </ul>
 </li>
-<li><a href="#code-conventions-and-best-practices">6. Code conventions and best practices</a>
+<li><a href="#code-conventions-and-best-practices">7. Code conventions and best practices</a>
 <ul class="sectlevel2">
-<li><a href="#packages">6.1. Packages</a></li>
-<li><a href="#constants">6.2. Constants</a></li>
-<li><a href="#methods">6.3. Methods</a></li>
-<li><a href="#methods-in-tests">6.4. Methods in Tests</a></li>
-<li><a href="#special-notes">6.5. Special notes</a></li>
-<li><a href="#database">6.6. Database</a>
+<li><a href="#packages">7.1. Packages</a></li>
+<li><a href="#constants">7.2. Constants</a></li>
+<li><a href="#methods">7.3. Methods</a></li>
+<li><a href="#methods-in-tests">7.4. Methods in Tests</a></li>
+<li><a href="#special-notes">7.5. Special notes</a></li>
+<li><a href="#database">7.6. Database</a>
 <ul class="sectlevel3">
-<li><a href="#tables">6.6.1. Tables</a></li>
-<li><a href="#constraints-keys-indexes">6.6.2. Constraints, Keys, Indexes</a></li>
-<li><a href="#applying-a-patch">6.6.3. Applying a patch</a></li>
-<li><a href="#jpa-mapping-entity">6.6.4. JPA mapping entity</a></li>
+<li><a href="#tables">7.6.1. Tables</a></li>
+<li><a href="#constraints-keys-indexes">7.6.2. Constraints, Keys, Indexes</a></li>
+<li><a href="#applying-a-patch">7.6.3. Applying a patch</a></li>
+<li><a href="#jpa-mapping-entity">7.6.4. JPA mapping entity</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#todo-items">7. TODO items</a></li>
-<li><a href="#links-2">8. Links</a></li>
+<li><a href="#todo-items">8. TODO items</a></li>
+<li><a href="#links-2">9. Links</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="terminology"><a class="anchor" href="#terminology"></a>1. Terminology</h2>
+<h2 id="my-presentation-for-java-communities-about-spring-rest-docs"><a class="anchor" href="#my-presentation-for-java-communities-about-spring-rest-docs"></a>1. My presentation for Java communities about Spring Rest Docs</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="morning-lohika-2017"><a class="anchor" href="#morning-lohika-2017"></a>1.1. Morning@Lohika 2017</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Lviv, 20 May 2017 <strong><em>morning@lohika</em></strong></p>
+</div>
+<div class="paragraph">
+<p>My presentations for Java Community on 3rd birthday of morning@lohika.</p>
+</div>
+<div class="paragraph">
+<p>Topic: "Test Driven Documentation with Spring Rest Docs"</p>
+</div>
+<div class="paragraph">
+<p><a href="http://morning.lohika.com/news/3rd-birthday-morninglohika" class="bare">http://morning.lohika.com/news/3rd-birthday-morninglohika</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>What we have done on talk:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> SpringFox Demo</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Swagger approaches and trade-offs</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Test Driven Development &#8594; Test Driven Documentation</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Inside Spring Test mockMvc Framework</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Live Coding session - how to connect and start using SpringRestDocs</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Thanks guys for joining my talk.</p>
+</div>
+<div class="paragraph">
+<p>You were awesome audience !!!</p>
+</div>
+<div class="paragraph">
+<p>I&#8217;m sure you enjoyed our live coding session.</p>
+</div>
+<div class="paragraph">
+<p>Happy Birthday morning@lohika, best wishes to you all !!!</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="terminology"><a class="anchor" href="#terminology"></a>2. Terminology</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -519,10 +604,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="rest-conventions"><a class="anchor" href="#rest-conventions"></a>2. Rest conventions</h2>
+<h2 id="rest-conventions"><a class="anchor" href="#rest-conventions"></a>3. Rest conventions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="http-verbs"><a class="anchor" href="#http-verbs"></a>2.1. HTTP verbs</h3>
+<h3 id="http-verbs"><a class="anchor" href="#http-verbs"></a>3.1. HTTP verbs</h3>
 <div class="paragraph">
 <p>Speakers Service tries to adhere as closely as possible to standard HTTP and REST conventions in its
 use of HTTP verbs.</p>
@@ -561,7 +646,7 @@ use of HTTP verbs.</p>
 </table>
 </div>
 <div class="sect2">
-<h3 id="http-status-codes"><a class="anchor" href="#http-status-codes"></a>2.2. HTTP status codes</h3>
+<h3 id="http-status-codes"><a class="anchor" href="#http-status-codes"></a>3.2. HTTP status codes</h3>
 <div class="paragraph">
 <p>Speakers Service tries to adhere as closely as possible to standard HTTP and REST conventions in its
 use of HTTP status codes.</p>
@@ -615,12 +700,12 @@ use of HTTP status codes.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="endpoints"><a class="anchor" href="#endpoints"></a>3. Endpoints</h2>
+<h2 id="endpoints"><a class="anchor" href="#endpoints"></a>4. Endpoints</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="speaker"><a class="anchor" href="#speaker"></a>3.1. Speaker</h3>
+<h3 id="speaker"><a class="anchor" href="#speaker"></a>4.1. Speaker</h3>
 <div class="sect3">
-<h4 id="get-all-speakers"><a class="anchor" href="#get-all-speakers"></a>3.1.1. Get all speakers</h4>
+<h4 id="get-all-speakers"><a class="anchor" href="#get-all-speakers"></a>4.1.1. Get all speakers</h4>
 <div class="sect4">
 <h5 id="curl-example"><a class="anchor" href="#curl-example"></a>Curl example</h5>
 <div class="listingblock">
@@ -657,7 +742,7 @@ Content-Length: 710
     "speakers" : [ {
       "name" : "Josh Long",
       "company" : "Pivotal",
-      "status" : "I like morning@lohike \\o// !!!",
+      "status" : "I LIKE morning@lohika \\0// !!!",
       "_links" : {
         "self" : {
           "href" : "https://mydomain.com:8080/speakers/6"
@@ -669,7 +754,7 @@ Content-Length: 710
     }, {
       "name" : "Venkat Subramaniam",
       "company" : "Agile",
-      "status" : "I like morning@lohike \\o// !!!",
+      "status" : "I LIKE morning@lohika \\0// !!!",
       "_links" : {
         "self" : {
           "href" : "https://mydomain.com:8080/speakers/7"
@@ -741,7 +826,7 @@ Content-Length: 710
 </div>
 </div>
 <div class="sect3">
-<h4 id="get-speaker"><a class="anchor" href="#get-speaker"></a>3.1.2. Get speaker</h4>
+<h4 id="get-speaker"><a class="anchor" href="#get-speaker"></a>4.1.2. Get speaker</h4>
 <div class="sect4">
 <h5 id="curl-example-2"><a class="anchor" href="#curl-example-2"></a>Curl example</h5>
 <div class="listingblock">
@@ -798,7 +883,7 @@ Content-Length: 279
 {
   "name" : "Josh Long",
   "company" : "Pivotal",
-  "status" : "I like morning@lohike \\o// !!!",
+  "status" : "I LIKE morning@lohika \\0// !!!",
   "_links" : {
     "self" : {
       "href" : "https://mydomain.com:8080/speakers/1"
@@ -878,7 +963,7 @@ Content-Length: 279
 </div>
 </div>
 <div class="sect3">
-<h4 id="create-speaker"><a class="anchor" href="#create-speaker"></a>3.1.3. Create speaker</h4>
+<h4 id="create-speaker"><a class="anchor" href="#create-speaker"></a>4.1.3. Create speaker</h4>
 <div class="sect4">
 <h5 id="curl-example-3"><a class="anchor" href="#curl-example-3"></a>Curl example</h5>
 <div class="listingblock">
@@ -1091,7 +1176,7 @@ Content-Length: 160
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-speaker"><a class="anchor" href="#delete-speaker"></a>3.1.4. Delete speaker</h4>
+<h4 id="delete-speaker"><a class="anchor" href="#delete-speaker"></a>4.1.4. Delete speaker</h4>
 <div class="sect4">
 <h5 id="curl-example-4"><a class="anchor" href="#curl-example-4"></a>Curl example</h5>
 <div class="listingblock">
@@ -1126,7 +1211,7 @@ Host: mydomain.com:8080</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="get-speaker-s-topics"><a class="anchor" href="#get-speaker-s-topics"></a>3.1.5. Get speaker&#8217;s topics</h4>
+<h4 id="get-speaker-s-topics"><a class="anchor" href="#get-speaker-s-topics"></a>4.1.5. Get speaker&#8217;s topics</h4>
 <div class="sect4">
 <h5 id="curl-example-5"><a class="anchor" href="#curl-example-5"></a>Curl example</h5>
 <div class="listingblock">
@@ -1260,13 +1345,13 @@ Content-Length: 406
 </div>
 </div>
 <div class="sect2">
-<h3 id="topic"><a class="anchor" href="#topic"></a>3.2. Topic</h3>
+<h3 id="topic"><a class="anchor" href="#topic"></a>4.2. Topic</h3>
 
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="asciidoc-is-awesome"><a class="anchor" href="#asciidoc-is-awesome"></a>4. AsciiDoc is awesome</h2>
+<h2 id="asciidoc-is-awesome"><a class="anchor" href="#asciidoc-is-awesome"></a>5. AsciiDoc is awesome</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Asciidoc is powerful tool to process text and images.
@@ -1274,7 +1359,7 @@ I&#8217;m adding here the general example of asciidoc format. To see all of them
 <a href="http://asciidoctor.org">Asciidoctor</a></p>
 </div>
 <div class="sect2">
-<h3 id="admonitions"><a class="anchor" href="#admonitions"></a>4.1. Admonitions</h3>
+<h3 id="admonitions"><a class="anchor" href="#admonitions"></a>5.1. Admonitions</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1340,7 +1425,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="text-formatting"><a class="anchor" href="#text-formatting"></a>4.2. Text formatting</h3>
+<h3 id="text-formatting"><a class="anchor" href="#text-formatting"></a>5.2. Text formatting</h3>
 <div class="paragraph">
 <p><strong>bold phrase</strong> &amp; <strong>char</strong>acter<strong>s</strong></p>
 </div>
@@ -1365,7 +1450,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="marks"><a class="anchor" href="#marks"></a>4.3. Marks</h3>
+<h3 id="marks"><a class="anchor" href="#marks"></a>5.3. Marks</h3>
 <div class="paragraph">
 <p>Werewolves are allergic to <mark>cassia cinnamon</mark>.</p>
 </div>
@@ -1383,7 +1468,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="superscript-subscript"><a class="anchor" href="#superscript-subscript"></a>4.4. Superscript Subscript</h3>
+<h3 id="superscript-subscript"><a class="anchor" href="#superscript-subscript"></a>5.4. Superscript Subscript</h3>
 <div class="paragraph">
 <p><sup>super</sup>script phrase</p>
 </div>
@@ -1392,11 +1477,11 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="horizontal-line"><a class="anchor" href="#horizontal-line"></a>4.5. Horizontal line</h3>
+<h3 id="horizontal-line"><a class="anchor" href="#horizontal-line"></a>5.5. Horizontal line</h3>
 <hr>
 </div>
 <div class="sect2">
-<h3 id="lists"><a class="anchor" href="#lists"></a>4.6. Lists</h3>
+<h3 id="lists"><a class="anchor" href="#lists"></a>5.6. Lists</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1411,7 +1496,7 @@ Ensure that&#8230;&#8203;
 </ul>
 </div>
 <div class="sect3">
-<h4 id="ordered"><a class="anchor" href="#ordered"></a>4.6.1. Ordered</h4>
+<h4 id="ordered"><a class="anchor" href="#ordered"></a>5.6.1. Ordered</h4>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1438,7 +1523,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="checklists"><a class="anchor" href="#checklists"></a>4.7. Checklists</h3>
+<h3 id="checklists"><a class="anchor" href="#checklists"></a>5.7. Checklists</h3>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
@@ -1457,7 +1542,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="q-a"><a class="anchor" href="#q-a"></a>4.8. Q&amp;A</h3>
+<h3 id="q-a"><a class="anchor" href="#q-a"></a>5.8. Q&amp;A</h3>
 <div class="qlist qanda">
 <ol>
 <li>
@@ -1472,7 +1557,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="links"><a class="anchor" href="#links"></a>4.9. Links</h3>
+<h3 id="links"><a class="anchor" href="#links"></a>5.9. Links</h3>
 <div class="paragraph">
 <p><a href="http://asciidoctor.org" class="bare">http://asciidoctor.org</a> - automatic!</p>
 </div>
@@ -1484,7 +1569,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="images"><a class="anchor" href="#images"></a>4.10. Images</h3>
+<h3 id="images"><a class="anchor" href="#images"></a>5.10. Images</h3>
 <div class="imageblock">
 <div class="content">
 <img src="http://asciidoctor.org/images/octocat.jpg" alt="GitHub mascot">
@@ -1492,7 +1577,7 @@ Ensure that&#8230;&#8203;
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-blocks"><a class="anchor" href="#code-blocks"></a>4.11. Code blocks</h3>
+<h3 id="code-blocks"><a class="anchor" href="#code-blocks"></a>5.11. Code blocks</h3>
 <div id="app-listing" class="listingblock">
 <div class="title">app.rb</div>
 <div class="content">
@@ -1522,7 +1607,7 @@ end</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-included-from-source-file-speaker-java"><a class="anchor" href="#code-included-from-source-file-speaker-java"></a>4.12. Code included from source file Speaker.java</h3>
+<h3 id="code-included-from-source-file-speaker-java"><a class="anchor" href="#code-included-from-source-file-speaker-java"></a>5.12. Code included from source file Speaker.java</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java" data-lang="java">package smartjava.domain.speaker;
@@ -1578,7 +1663,7 @@ public class Speaker {
 </div>
 </div>
 <div class="sect2">
-<h3 id="code-from-source-only-lines-26-49-included"><a class="anchor" href="#code-from-source-only-lines-26-49-included"></a>4.13. Code from source only lines 26-49 included</h3>
+<h3 id="code-from-source-only-lines-26-49-included"><a class="anchor" href="#code-from-source-only-lines-26-49-included"></a>5.13. Code from source only lines 26-49 included</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-ruby" data-lang="ruby">@Entity
@@ -1609,7 +1694,7 @@ public class Speaker {
 </div>
 </div>
 <div class="sect2">
-<h3 id="block-quote"><a class="anchor" href="#block-quote"></a>4.14. Block quote</h3>
+<h3 id="block-quote"><a class="anchor" href="#block-quote"></a>5.14. Block quote</h3>
 <div class="quoteblock">
 <blockquote>
 A person who never made a mistake never tried anything new.
@@ -1620,7 +1705,7 @@ A person who never made a mistake never tried anything new.
 </div>
 </div>
 <div class="sect2">
-<h3 id="admonition-block"><a class="anchor" href="#admonition-block"></a>4.15. Admonition block</h3>
+<h3 id="admonition-block"><a class="anchor" href="#admonition-block"></a>5.15. Admonition block</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1656,10 +1741,10 @@ A person who never made a mistake never tried anything new.
 </div>
 </div>
 <div class="sect1">
-<h2 id="application-settings"><a class="anchor" href="#application-settings"></a>5. Application settings</h2>
+<h2 id="application-settings"><a class="anchor" href="#application-settings"></a>6. Application settings</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="profiles-setting"><a class="anchor" href="#profiles-setting"></a>5.1. Profiles setting</h3>
+<h3 id="profiles-setting"><a class="anchor" href="#profiles-setting"></a>6.1. Profiles setting</h3>
 <div class="paragraph">
 <p>Production profile:</p>
 </div>
@@ -1680,7 +1765,7 @@ spring.datasource.password=
 </div>
 </div>
 <div class="sect1">
-<h2 id="code-conventions-and-best-practices"><a class="anchor" href="#code-conventions-and-best-practices"></a>6. Code conventions and best practices</h2>
+<h2 id="code-conventions-and-best-practices"><a class="anchor" href="#code-conventions-and-best-practices"></a>7. Code conventions and best practices</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
@@ -1695,7 +1780,7 @@ Mysql Error codes <i class="conum" data-value="3"></i><b>(3)</b></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="packages"><a class="anchor" href="#packages"></a>6.1. Packages</h3>
+<h3 id="packages"><a class="anchor" href="#packages"></a>7.1. Packages</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1717,7 +1802,7 @@ Companies use their reversed Internet domain name to begin their package names.
 </div>
 </div>
 <div class="sect2">
-<h3 id="constants"><a class="anchor" href="#constants"></a>6.2. Constants</h3>
+<h3 id="constants"><a class="anchor" href="#constants"></a>7.2. Constants</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1739,7 +1824,7 @@ The names of variables declared class constants and of ANSI constants should be 
 </div>
 </div>
 <div class="sect2">
-<h3 id="methods"><a class="anchor" href="#methods"></a>6.3. Methods</h3>
+<h3 id="methods"><a class="anchor" href="#methods"></a>7.3. Methods</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1767,7 +1852,7 @@ public Speaker createSpeaker() {
 </div>
 </div>
 <div class="sect2">
-<h3 id="methods-in-tests"><a class="anchor" href="#methods-in-tests"></a>6.4. Methods in Tests</h3>
+<h3 id="methods-in-tests"><a class="anchor" href="#methods-in-tests"></a>7.4. Methods in Tests</h3>
 <div class="admonitionblock caution">
 <table>
 <tr>
@@ -1810,7 +1895,7 @@ Method name pattern is:     <strong>test&lt;MethodName&gt;_&lt;testCase&gt;</str
 </div>
 </div>
 <div class="sect2">
-<h3 id="special-notes"><a class="anchor" href="#special-notes"></a>6.5. Special notes</h3>
+<h3 id="special-notes"><a class="anchor" href="#special-notes"></a>7.5. Special notes</h3>
 <div class="admonitionblock warning">
 <table>
 <tr>
@@ -1826,9 +1911,9 @@ If you need to format string, do not use <code>java.text.MessageFormat</code> si
 </div>
 </div>
 <div class="sect2">
-<h3 id="database"><a class="anchor" href="#database"></a>6.6. Database</h3>
+<h3 id="database"><a class="anchor" href="#database"></a>7.6. Database</h3>
 <div class="sect3">
-<h4 id="tables"><a class="anchor" href="#tables"></a>6.6.1. Tables</h4>
+<h4 id="tables"><a class="anchor" href="#tables"></a>7.6.1. Tables</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1850,7 +1935,7 @@ speaker</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="constraints-keys-indexes"><a class="anchor" href="#constraints-keys-indexes"></a>6.6.2. Constraints, Keys, Indexes</h4>
+<h4 id="constraints-keys-indexes"><a class="anchor" href="#constraints-keys-indexes"></a>7.6.2. Constraints, Keys, Indexes</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1875,11 +1960,11 @@ UNIQUE KEY `UK_table_name`</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="applying-a-patch"><a class="anchor" href="#applying-a-patch"></a>6.6.3. Applying a patch</h4>
+<h4 id="applying-a-patch"><a class="anchor" href="#applying-a-patch"></a>7.6.3. Applying a patch</h4>
 
 </div>
 <div class="sect3">
-<h4 id="jpa-mapping-entity"><a class="anchor" href="#jpa-mapping-entity"></a>6.6.4. JPA mapping entity</h4>
+<h4 id="jpa-mapping-entity"><a class="anchor" href="#jpa-mapping-entity"></a>7.6.4. JPA mapping entity</h4>
 <div class="admonitionblock important">
 <table>
 <tr>
@@ -1898,7 +1983,7 @@ Updates to DB schema are applied only by adding new patch.
 </div>
 </div>
 <div class="sect1">
-<h2 id="todo-items"><a class="anchor" href="#todo-items"></a>7. TODO items</h2>
+<h2 id="todo-items"><a class="anchor" href="#todo-items"></a>8. TODO items</h2>
 <div class="sectionbody">
 <div class="ulist checklist">
 <ul class="checklist">
@@ -1922,7 +2007,7 @@ Updates to DB schema are applied only by adding new patch.
 </div>
 </div>
 <div class="sect1">
-<h2 id="links-2"><a class="anchor" href="#links-2"></a>8. Links</h2>
+<h2 id="links-2"><a class="anchor" href="#links-2"></a>9. Links</h2>
 <div class="sectionbody">
 <div class="colist arabic">
 <table>
@@ -1946,7 +2031,7 @@ Updates to DB schema are applied only by adding new patch.
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 1.1<br>
+Version 1.2<br>
 Last updated 2017-05-06 16:06:46 +03:00
 </div>
 </div>
